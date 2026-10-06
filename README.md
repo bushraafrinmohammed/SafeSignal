@@ -4,7 +4,7 @@ Pulls Alcon device adverse event reports from the FDA MAUDE database through the
 
 **Stack:** Python · openFDA REST API · pandas · scikit-learn (TF-IDF, Logistic Regression, Linear SVM, Naive Bayes, NMF) · Matplotlib · Streamlit
 
-**Live dashboard:** _add your Streamlit Cloud link here_
+**🚀 Live dashboard:** [safesignal-bushra.streamlit.app](https://safesignal-bushra.streamlit.app)
 
 ---
 
