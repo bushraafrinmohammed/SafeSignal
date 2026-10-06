@@ -1,0 +1,133 @@
+{
+  "n_reports": 4616,
+  "harm_rate": 0.16681109185441942,
+  "date_range": "2026-04-16 to 2026-08-31",
+  "surveillance": {
+    "categories": {
+      "General Surgery Tray": 1798,
+      "Intraocular Lens": 790,
+      "Unit, Phacofragmentation": 525,
+      "Lens, Intraocular, Toric Optics": 455,
+      "Knife, Ophthalmic": 167,
+      "Lens, Multifocal Intraocular": 132,
+      "Instrument, Vitreous Aspiration And Cutt": 101,
+      "Extended Depth Of Focus Intraocular Lens": 86
+    },
+    "top_problems": {
+      "Failure to Cut": 1181,
+      "Suction Problem": 605,
+      "Adverse Event Without Identified Device or Use Problem": 502,
+      "Dull, Blunt": 268,
+      "Break": 210,
+      "Device Difficult to Setup or Prepare": 199,
+      "Material Twisted/Bent": 191,
+      "Scratched Material": 151,
+      "Failure to Deliver": 144,
+      "Improper Flow or Infusion": 140
+    },
+    "topics": {
+      "Topic 1": "vitrectomy, cut, probe, surgery surgery, probe cut, vitrectomy surgery, cut vitrectomy, surgery completed",
+      "Topic 2": "lens, iol, lens iol, intraocular lens, intraocular, implant, iol implant, implant procedure",
+      "Topic 3": "type, procedure type, type surgery, cutter, surgery procedure, physician, physician cutter, procedure",
+      "Topic 4": "lens, following, iol, vision, following intraocular, reason, clinical reason, clinical",
+      "Topic 5": "cutting, poor cutting, probe poor, vitrectomy, poor, cutting vitrectomy, probe, surgery surgery",
+      "Topic 6": "cataract, cataract surgery, tip, handpiece, surgery completed, phacoemulsification, eye, completed",
+      "Topic 7": "procedure time, time, dull, procedure, dull procedure, knives, different, knife",
+      "Topic 8": "new, replacing new, procedure completed, day replacing, completed day, surgery procedure, day, replacing"
+    },
+    "topic_share_pct": {
+      "Topic 2": 25.1,
+      "Topic 6": 17.4,
+      "Topic 3": 11.6,
+      "Topic 1": 10.2,
+      "Topic 8": 10.1,
+      "Topic 7": 9.1,
+      "Topic 4": 8.6,
+      "Topic 5": 8.0
+    },
+    "harm_rate_by_topic_pct": {
+      "Topic 1": 0.9,
+      "Topic 2": 6.1,
+      "Topic 3": 2.1,
+      "Topic 4": 95.7,
+      "Topic 5": 0.8,
+      "Topic 6": 34.3,
+      "Topic 7": 3.8,
+      "Topic 8": 1.9
+    },
+    "topic_examples": {
+      "Topic 1": "A NON-HEALTHCARE PROFESSIONAL REPORTED THAT VITRECTOMY PROBE COULD NOT CUT DURING THE VITRECTOMY SURGERY. THE SURGERY WAS COMPLETED ON SAME DAY BY REPLACING THE PRODUCT. THERE WAS NO REPORT OF PATIENT IMPACT.",
+      "Topic 2": "A NON-HEALTHCARE PROFESSIONAL REPORTED DURING INTRAOCULAR LENS (IOL) IMPLANT PROCEDURE, THE LENS WAS DRIED OUT. ADDITIONAL INFORMATION HAS BEEN REQUESTED BUT IS NOT AVAILABLE AT THE TIME OF THIS REPORT.",
+      "Topic 3": "A physician reported that cutter could not cut during the surgery. The procedure type was unknown. The surgery was completed on the same day after replacing the product with another one. There was no patient impact.",
+      "Topic 4": "ADDITIONAL INFORMATION HAS BEEN REQUESTED AND RECEIVED STATING THAT THE LENS WAS EXCHANGED FOR A NON-COMPANY LENS. THERE WAS NO FURTHER IMPACT TO THE PATIENT. A NURSE REPORTED THAT FOLLOWING AN INTRAOCULAR LENS (IOL) IMPLANT PROCEDURE, THE PATIENT EXPERIENCED BLURRY VISION AND CLINICAL REASON FOR EXPLANT BEING ASTHENOPIA. THE IOL WAS EXPLANTED AND EXCHANGED FOR AN UNKNOWN ADVANCED TECHNOLOGY INTRA",
+      "Topic 5": "A OTHER HEALTH CARE PROFESSIONAL REPORTED THAT VITRECTOMY PROBE WAS POOR CUTTING BEFORE VITRECTOMY SURGERY. THE SURGERY WAS COMPLETED ON THE SAME DAY. THERE WAS NO INFORMATION ABOUT PATIENT IMPACT.",
+      "Topic 6": "A PHYSICIAN REPORTED PHACOEMULSIFICATION TIP SLEEVE ISSUE OCCURRED DURING CATARACT SURGERY (WITH INTRAOCULAR LENS IMPLANT). THE SURGERY WAS COMPLETED ON THE SAME DAY BY REPLACING THE PRODUCT WITH ANOTHER ONE. THERE WAS NO PATIENT IMPACT.",
+      "Topic 7": "A health care professional reported that during an ophthalmic surgery, ophthalmic knifes were found to be dull. Procedure details and patient impact are not reported. Additional information has been requested but is not available at the time of this report.",
+      "Topic 8": "A nurse reported that probe had no aspiration during vitrectomy surgery. The procedure was completed on same day after replacing the product with new one. There was no patient impact."
+    }
+  },
+  "classifier": {
+    "train_reports": 3692,
+    "test_reports": 924,
+    "test_period": "2026-07-14 to 2026-08-31",
+    "test_harm_rate": 0.26731601731601734,
+    "models": [
+      {
+        "model": "Logistic Regression",
+        "recall": 0.9473684210526315,
+        "precision": 0.9590163934426229,
+        "f1": 0.9531568228105907,
+        "roc_auc": 0.9932124937955615,
+        "pr_auc": 0.9879561793242975,
+        "capture_top30_pct": 97.57085020242914
+      },
+      {
+        "model": "Linear SVM",
+        "recall": 0.8987854251012146,
+        "precision": 0.9823008849557522,
+        "f1": 0.9386892177589852,
+        "roc_auc": 0.9929194648933435,
+        "pr_auc": 0.9878785936801904,
+        "capture_top30_pct": 97.97570850202429
+      },
+      {
+        "model": "Naive Bayes",
+        "recall": 0.9433198380566802,
+        "precision": 0.9066147859922179,
+        "f1": 0.9246031746031746,
+        "roc_auc": 0.9895944838804203,
+        "pr_auc": 0.9794476298409734,
+        "capture_top30_pct": 96.35627530364373
+      }
+    ],
+    "best_model": "Logistic Regression",
+    "harm_terms": [
+      "experienced",
+      "following",
+      "tear",
+      "incision",
+      "secondary",
+      "vision",
+      "condition",
+      "secondary procedure",
+      "exchanged",
+      "current",
+      "following intraocular",
+      "capsular"
+    ],
+    "malfunction_terms": [
+      "haptic",
+      "harm",
+      "surgery",
+      "completed",
+      "completed day",
+      "replacing",
+      "vitrectomy surgery",
+      "surgery surgery",
+      "injector",
+      "aspiration",
+      "did",
+      "nurse"
+    ]
+  }
+}
